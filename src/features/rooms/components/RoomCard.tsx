@@ -12,7 +12,7 @@ export default function RoomCard({ room, isActive }: Props) {
 
   const handleBook = () => {
     if (isActive) {
-      navigate("/reservation"); 
+      navigate("/booking"); 
     }
   };
 

@@ -35,7 +35,8 @@ export default function FacilityItem({ facility, index }: { facility: Facility, 
             
             <div className={styles.rightSection}>
                 <div>
-                    <h2>{facility.name}</h2>
+                    <center><h2>{facility.name}</h2></center>
+                    <br />
                     <p>{facility.description}</p>
                 </div>
             </div>
