@@ -8,11 +8,18 @@ export default function AddModal() {
 
   return (
     <div className={styles["pub-modal"]}>
-      <img
-        src={currentAdd.imageURL}
-        alt="Publicidad"
-        className={styles["pub-image"]}
-      />
+      <a 
+        href={currentAdd.targetURL} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className={styles["pub-link"]}
+      >
+        <img
+          src={currentAdd.imageURL}
+          alt="Publicidad"
+          className={styles["pub-image"]}
+        />
+      </a>
     </div>
   );
 }
