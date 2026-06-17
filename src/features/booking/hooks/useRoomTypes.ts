@@ -1,6 +1,6 @@
 import { useAsyncState } from "../../../shared/hooks/useLoading";
 import { bookingService } from "../services/booking.service";
-import type { BookingFilters, RoomType } from "../types/booking.types";
+import type { BookingFilters } from "../types/booking.types";
 
 export const useRoomTypes = () => {
   const searchState = useAsyncState();
@@ -13,12 +13,12 @@ export const useRoomTypes = () => {
   const fetchRoomTypeCatalog = async () => {
     return await catalogState.withAsync(() => bookingService.getAllRoomTypes());
   };
-  
+
   return {
     searchAvailableRooms,
     isSearching: searchState.isLoading,
     searchError: searchState.error,
-    
+
     fetchRoomTypeCatalog,
     isFetchingCatalog: catalogState.isLoading,
     catalogError: catalogState.error,
